@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <practice.csy.com.customprogress.view.CustomHorizontalProgresWithNum
+            android:id="@+id/horizontalProgress2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:progress="0"
+            app:HorizontalProgressHaveText="false"
+            app:HorizontalProgressReachColor="@color/C00FFAA"
+            app:HorizontalProgressReachHeight="20dp"
+            app:HorizontalProgressUnReachColor="@color/C0B1949" />
+
+
+        <practice.csy.com.customprogress.view.CustomHorizontalProgresWithNum
+            android:id="@+id/horizontalProgress3"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:progress="0"
+            app:HorizontalProgressHaveText="true"
+            app:HorizontalProgressReachColor="@color/C00FFAA"
+            app:HorizontalProgressReachHeight="20dp"
+            app:HorizontalProgressTextColor="@color/C00FFAA"
+            app:HorizontalProgressTextColorComplete="@color/CFF0000"
+            app:HorizontalProgressUnReachColor="@color/C0B1949" />
+
+
+        <practice.csy.com.customprogress.view.CustomHorizontalProgresWithNumber
+            android:id="@+id/horizontalProgress4"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:progress="0"
+            app:HorizontalProgressBackgroundColor="@color/colorAccent"
+            app:HorizontalProgressReachColor="@color/C00FFAA"
+            app:HorizontalProgressReachHeight="15dp"
+            app:HorizontalProgressTextColor="@color/CFFFFFF"
+            app:HorizontalProgressUnReachColor="@color/C0B1949"
+            app:HorizontalProgressUnReachHeight="15dp" />
+
+        <practice.csy.com.customprogress.view.CustomHorizontalProgresWithNumber
+            android:id="@+id/horizontalProgress5"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:progress="0"
+            app:HorizontalProgressBackgroundColor="@color/CFFFFFF"
+            app:HorizontalProgressReachColor="#00ffaa"
+            app:HorizontalProgressReachHeight="20dp"
+            app:HorizontalProgressTextColor="#00ffaa"
+            app:HorizontalProgressTextInnerOrOutSide="false" />
+
+        <practice.csy.com.customprogress.view.RoundlProgresWithNum
+            android:id="@+id/mRoundlProgressWithNum33"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:max="360"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:progress="0"
+            app:CustomCircleRadio="50dp"
+            app:CustomHasProgressNum="true"
+            app:CustomProgressReachColor="@color/C00FFAA"
+            app:CustomProgressTextColor="@color/C00FFAA"
+            app:CustomProgressTextSize="12sp"
+            app:CustomProgressUnReachColor="@color/CFF0000"
+            app:CustomReachPaintStroken="20dp"
+            app:CustomUnReachEnd="0"
+            app:CustomUnReachPaintStroken="10dp"
+            app:CustomUnReachStart="360" />
+
+        <practice.csy.com.customprogress.view.RoundlProgresWithNum
+            android:id="@+id/mRoundlProgressWithNum44"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:max="360"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:progress="0"
+            app:CustomCircleRadio="50dp"
+            app:CustomHasProgressNum="false"
+            app:CustomProgressReachColor="@color/C00FFAA"
+            app:CustomProgressTextColor="@color/C00FFAA"
+            app:CustomProgressTextSize="12sp"
+            app:CustomProgressUnReachColor="@color/CFF0000"
+            app:CustomReachPaintStroken="20dp"
+            app:CustomUnReachEnd="0"
+            app:CustomUnReachPaintStroken="10dp"
+            app:CustomUnReachStart="360" />
+
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="暂停" />
+    </LinearLayout>
+</ScrollView>

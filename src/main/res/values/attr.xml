@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomHorizontalProgressStyle">
+        <attr name="HorizontalProgressUnReachHeight" format="dimension" />
+        <attr name="HorizontalProgressReachColor" format="color" />
+        <attr name="HorizontalProgressUnReachColor" format="color" />
+        <attr name="HorizontalProgressReachHeight" format="dimension" />
+        <attr name="HorizontalProgressTextColor" format="color" />
+        <attr name="HorizontalProgressTextColorComplete" format="color" />
+        <attr name="HorizontalProgressTextSize" format="dimension" />
+        <attr name="HorizontalProgressTextOffset" format="dimension" />
+        <attr name="HorizontalProgressBackgroundColor" format="color" />
+        <attr name="HorizontalProgressTextInnerOrOutSide" format="boolean" />
+        <attr name="HorizontalProgressHaveText" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CustomCircleProgressStyle">
+        <attr name="CustomCircleRadio" format="dimension" />
+        <attr name="CustomReachPaintStroken" format="dimension" />
+        <attr name="CustomUnReachPaintStroken" format="dimension" />
+        <attr name="CustomUnReachEnd" format="integer" />
+        <attr name="CustomUnReachStart" format="integer" />
+        <attr name="CustomHasProgressNum" format="boolean" />
+        <attr name="CustomProgressReachColor" format="color" />
+        <attr name="CustomProgressUnReachColor" format="color" />
+        <attr name="CustomProgressTextColor" format="color" />
+        <attr name="CustomProgressTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>
