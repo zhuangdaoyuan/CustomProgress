@@ -84,7 +84,6 @@ public class RoundlProgresWithNum extends ProgressBar {
         typedArray.recycle();
     }
 
-
     @Override
     protected synchronized void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);

@@ -8,17 +8,20 @@ import android.widget.Button;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import practice.csy.com.customprogress.constant.Constant;
 import practice.csy.com.customprogress.view.CustomHorizontalProgresWithNum;
 import practice.csy.com.customprogress.view.CustomHorizontalProgresWithNumber;
 import practice.csy.com.customprogress.view.RoundlProgresWithNum;
+import practice.csy.com.customprogress.view.TextProgressBar;
 
 public class MainActivity extends AppCompatActivity {
     private CustomHorizontalProgresWithNum horizontalProgress2, horizontalProgress3;//水平带进度
     private CustomHorizontalProgresWithNumber horizontalProgress4, horizontalProgress5;
     private RoundlProgresWithNum mRoundlProgresWithNum33, mRoundlProgresWithNum44;//自定义圆形进度条 带数字进度
+    private TextProgressBar textProgressBar;
 
     private Timer timer3;
-    private Timer timer33;
+    private Timer timer33, timer44;
     private Button pause;
     private boolean pauseFlag = true;
 
@@ -78,7 +81,39 @@ public class MainActivity extends AppCompatActivity {
                 mRoundlProgresWithNum44.setProgress(mRoundlProgresWithNum44.getProgress() + 1);
             }
         }, 20, 20);
-    }
 
+
+        textProgressBar = (TextProgressBar) findViewById(R.id.textProgress);
+        textProgressBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.textProgress) {
+                    switch (textProgressBar.getStateType()) {
+                        case Constant.Default:
+                            textProgressBar.setStateType(Constant.Downloading);
+                            timer44 = new Timer();
+                            timer44.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    if (textProgressBar.getProgress() >= textProgressBar.getMax()) {
+                                        timer44.cancel();
+                                    }
+                                    if (textProgressBar.getStateType() == Constant.Downloading)
+                                        textProgressBar.setProgress(textProgressBar.getProgress() + 1);
+                                }
+                            }, 20, 20);
+                            break;
+                        case Constant.Downloading:
+                            textProgressBar.setStateType(Constant.Pause);
+                            break;
+                        case Constant.Pause:
+                            textProgressBar.setStateType(Constant.Downloading);
+                            break;
+                    }
+                }
+            }
+        });
+        textProgressBar.setStateType(Constant.Default);
+    }
 
 }

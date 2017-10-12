@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyProgress</string>
+    <string name="pause">暂停</string>
+    <string name="download">下载</string>
+    <string name="finish">完成</string>
+    <string name="failed">下载失败</string>
 </resources>

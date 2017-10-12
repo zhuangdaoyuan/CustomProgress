@@ -113,6 +113,12 @@
             app:CustomUnReachPaintStroken="10dp"
             app:CustomUnReachStart="360" />
 
+        <practice.csy.com.customprogress.view.TextProgressBar
+            android:id="@+id/textProgress"
+            style="@style/StyleTextProgressBar"
+            android:layout_width="200dp"
+            android:layout_height="40dp" />
+
         <Button
             android:id="@+id/pause"
             android:layout_width="match_parent"
